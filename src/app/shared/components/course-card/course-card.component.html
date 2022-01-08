@@ -7,11 +7,15 @@
   </figure>
   <div class="card-body">
     <h5 class="card-title">{{ course.title }}</h5>
-    <p class="card-text text-muted">{{ course.description }}</p>
-    <div class="py-3">
+    <p [title]="course.description" class="card-text text-muted description">{{ course.description }}</p>
+    <div class="py-1 d-flex gap-5">
       <div class="d-flex gap-2">
-        <fa-icon [icon]="userIcon"></fa-icon>
-        <p>{{ course.students }}</p>
+        <fa-icon class="text-muted" [icon]="userIcon"></fa-icon>
+        <p class="text-muted">{{ course.students }}</p>
+      </div>
+      <div class="d-flex gap-2">
+        <fa-icon class="icon-start" [icon]="startIcon"></fa-icon>
+        <p class="text-muted">{{ course.score }}</p>
       </div>
     </div>
     <div class="d-grid gap-2">
@@ -20,8 +24,11 @@
   </div>
   <div class="card-footer text-muted footer">
     <img class="avatar" [src]="course.teacher.picture.thumbnail" [alt]="course.teacher.name">
-    <div>
+    <div class="teacher-name">
       <p>{{ course.teacher.name }}</p>
+    </div>
+    <div>
+      <img class="flag" [src]="course.teacher.country.flags.svg" alt="">
     </div>
   </div>
 </div>
