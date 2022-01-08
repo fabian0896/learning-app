@@ -10,9 +10,4 @@ import { Course } from 'src/app/models/course';
 })
 export class HomeComponent {
 
-  courses$: Observable<Course[]>;
-
-  constructor(private courseService: CourseService) {
-      this.courses$ = this.courseService.getAll();
-   }
 }

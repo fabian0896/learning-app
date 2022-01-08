@@ -12,6 +12,7 @@ const routes: Routes = [
     resolve: {
       courses: CoursesResolver,
     },
+    runGuardsAndResolvers: 'always',
   },
   {
     path: ':id',

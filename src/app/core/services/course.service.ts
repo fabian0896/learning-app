@@ -14,10 +14,13 @@ export class CourseService {
     private http: HttpClient,
   ) { }
 
-  getAll() {
-    return this.http.get<CoursesResponse>(`${environment.apiUrl}/content`).pipe(
-      map(response => response.results),
-    );
+  getAll(page?: string, category?: string | string[]) {
+    page ??= '1';
+    return this.http.get<CoursesResponse>(`${environment.apiUrl}/content`, {
+      params: {
+        page: page,
+      }
+    });
   }
 
   getById(id: number) {
