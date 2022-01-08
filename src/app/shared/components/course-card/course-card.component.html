@@ -1,0 +1,13 @@
+<div *ngIf="course" class="card" style="width: 18rem;">
+  <figure class="image-container">
+    <img
+      src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      class="card-img-top"
+      alt="tegnology">
+  </figure>
+  <div class="card-body">
+    <h5 class="card-title">{{ course.title }}</h5>
+    <p class="card-text text-muted">{{ course.description }}</p>
+    <a href="#" class="btn btn-primary block">Más información</a>
+  </div>
+</div>
