@@ -8,6 +8,20 @@
   <div class="card-body">
     <h5 class="card-title">{{ course.title }}</h5>
     <p class="card-text text-muted">{{ course.description }}</p>
-    <a href="#" class="btn btn-primary block">Más información</a>
+    <div class="py-3">
+      <div class="d-flex gap-2">
+        <fa-icon [icon]="userIcon"></fa-icon>
+        <p>{{ course.students }}</p>
+      </div>
+    </div>
+    <div class="d-grid gap-2">
+      <a [routerLink]="[course.id]" class="btn btn-primary block">Más información</a>
+    </div>
+  </div>
+  <div class="card-footer text-muted footer">
+    <img class="avatar" [src]="course.teacher.picture.thumbnail" [alt]="course.teacher.name">
+    <div>
+      <p>{{ course.teacher.name }}</p>
+    </div>
   </div>
 </div>
