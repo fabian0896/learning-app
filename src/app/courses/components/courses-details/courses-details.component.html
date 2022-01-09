@@ -5,7 +5,8 @@
 
       <div class="main-info">
         <h1 class="title">{{ course.title }}</h1>
-        <p class="description">{{ course.description }}</p>
+        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure porro optio temporibus perspiciatis veritatis, alias hic dolorem nam unde autem magni recusandae asperiores, et explicabo ipsum ex cupiditate aperiam? Ratione?</p>
+        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure porro optio temporibus perspiciatis veritatis, alias hic dolorem nam unde autem magni recusandae asperiores, et explicabo ipsum ex cupiditate aperiam? Ratione?</p>
       </div>
 
       <div class="teacher">
@@ -52,7 +53,7 @@
       <div class="classes">
         <h4 class="title">Temario del curso</h4>
         <div>
-          <app-classes></app-classes>
+          <app-classes [classes]="course.content"></app-classes>
         </div>
       </div>
 
