@@ -1,0 +1,111 @@
+@use '/src/app/variables';
+
+.image-container {
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 16px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  cursor: pointer;
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  img {
+    width: 50%;
+    object-fit: cover;
+    transition: .2s;
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(-12deg);
+    opacity: .2;
+  }
+  .category{
+    font-size: 36px;
+    line-height: 40px;
+    color: rgba($color: white, $alpha: .4);
+    margin: 0;
+  }
+}
+
+
+.dense {
+  aspect-ratio: auto;
+  min-height: 200px;
+  border-radius: 0;
+  gap: 10px;
+}
+
+.list{
+  & > div{
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      margin: 0
+    }
+  }
+}
+
+.time{
+  margin-bottom: 16px;
+  background: variables.$gray-100;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .title{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: variables.$gray-800;
+    margin: 0;
+  }
+  .date{
+    color: variables.$gray-700;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+  .icon {
+    color: variables.$gray-800;
+    font-size: 20px;
+  }
+}
+
+.gradient {
+  &.development{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+  }
+  &.marketing{
+    background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+  }
+  &.art{
+    background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+  }
+  &.photography{
+    background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(173,0,171,1) 8.3%, rgba(15,51,92,1) 79.4% );
+  }
+  &.personal{
+    background-image: linear-gradient( 109.6deg,  rgba(209,0,116,1) 11.2%, rgba(110,44,107,1) 91.1% );
+  }
+  &.business{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+  }
+}

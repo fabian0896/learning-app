@@ -1,0 +1,36 @@
+<div class="custom-card">
+  <app-category-image [course]="course"></app-category-image>
+  <div class="info">
+    <h3 class="title">Información</h3>
+    <div class="list">
+      <div>
+        <fa-icon [icon]="clockIcon"></fa-icon>
+        <p>{{ course.content | courseHours }} Horas</p>
+      </div>
+      <div>
+        <fa-icon [icon]="bookIcon"></fa-icon>
+        <p>{{ course.content.length }} Modulos</p>
+      </div>
+      <div>
+        <fa-icon [icon]="playIcon"></fa-icon>
+        <p>{{ course.content | courseClasses }} clases</p>
+      </div>
+      <div>
+        <fa-icon [icon]="levelIcon"> </fa-icon>
+        <p>Nivel: Avanzado</p>
+      </div>
+    </div>
+    <div class="time">
+      <div>
+        <fa-icon class="icon" [icon]="clockIcon"></fa-icon>
+      </div>
+      <div>
+        <p class="title">Fecha limite para inscripción</p>
+        <h3 class="date">{{ course.limit_date| date }}</h3>
+      </div>
+    </div>
+    <div class="acctions">
+      <button class="btn btn-primary">Inscribirse</button>
+    </div>
+  </div>
+</div>

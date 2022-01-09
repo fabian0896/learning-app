@@ -1,3 +1,5 @@
+@use '/src/app/variables';
+
 .module-header{
   .title{
     color: rgb(31 41 55);
@@ -27,5 +29,39 @@
     gap: 10px;
     font-size: 12px;
     color: rgb(107 114 128);
+  }
+}
+
+.lesson{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .2s;
+  &:hover{
+    background: variables.$gray-100;
+  }
+  .info{
+    display: flex;
+    gap: 10px;
+    font-weight: 600;
+    color: variables.$gray-700;
+    .icon{
+      color: variables.$lime;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .time{
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$gray-500;
+    p {
+      margin: 0;
+    }
   }
 }

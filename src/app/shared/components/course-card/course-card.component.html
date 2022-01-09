@@ -1,8 +1,5 @@
 <div *ngIf="course" class="custom-card">
-  <figure [routerLink]="[course.id]" [ngClass]="['image-container gradient', course.category]">
-    <img [src]="'/assets/images/' + course.category + '.png'" alt="">
-    <h6 class="category">{{ course.category | category }}</h6>
-  </figure>
+  <app-category-image [course]="course"></app-category-image>
   <div class="info-container">
     <div class="main-info">
       <h2 class="title">{{ course.title }}</h2>

@@ -1,15 +1,15 @@
 <div class="resume">
   <div class="item">
     <fa-icon class="icon" [icon]="bookIcon"></fa-icon>
-    <p>4 Modulos</p>
+    <p>{{ classes.length }} Modulos</p>
   </div>
   <div class="item">
     <fa-icon class="icon" [icon]="playIcon"></fa-icon>
-    <p>50 Clases</p>
+    <p>{{ classes | courseClasses }} Clases</p>
   </div>
   <div class="item">
     <fa-icon class="icon" [icon]="clockIcon"></fa-icon>
-    <p>6.9 horas de contenido</p>
+    <p>{{ classes | courseHours }} horas de contenido</p>
   </div>
 </div>
 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -23,7 +23,17 @@
       </a>
     </h2>
     <div [id]="'modulo' + i" class="accordion-collapse collapse">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+      <div class="accordion-body">
+        <div class="lesson" *ngFor="let lesson of module.lessons; index as i">
+          <div class="info">
+            <fa-icon class="icon" [icon]="playIcon"></fa-icon>
+            <p>Clase {{ i + 1 }}</p>
+          </div>
+          <div class="time">
+            <p>{{ lesson | minutesSeconds }} min</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

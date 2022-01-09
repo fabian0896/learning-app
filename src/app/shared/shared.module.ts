@@ -6,7 +6,10 @@ import { CourseCardComponent } from './components/course-card/course-card.compon
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CategoryPipe } from './pipes/category.pipe';
-
+import { CategoryImageComponent } from './components/category-image/category-image.component';
+import { CourseHoursPipe } from './pipes/course-hours.pipe';
+import { CourseClassesPipe } from './pipes/course-classes.pipe';
+import { MinutesSecondsPipe } from './pipes/hour-seconds.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,10 @@ import { CategoryPipe } from './pipes/category.pipe';
     FooterComponent,
     CourseCardComponent,
     CategoryPipe,
+    CategoryImageComponent,
+    CourseHoursPipe,
+    CourseClassesPipe,
+    MinutesSecondsPipe,
   ],
   imports: [
     CommonModule,
@@ -25,6 +32,10 @@ import { CategoryPipe } from './pipes/category.pipe';
     FooterComponent,
     CourseCardComponent,
     CategoryPipe,
+    CategoryImageComponent,
+    CourseHoursPipe,
+    CourseClassesPipe,
+    MinutesSecondsPipe
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,34 @@
+<figure [routerLink]="['/courses',course.id]" [ngClass]="['image-container gradient', course.category, dense ? 'dense': '']">
+  <img [src]="'/assets/images/' + course.category + '.png'" [alt]="course.category | category">
+  <h6 class="category">{{ course.category | category }}</h6>
+  <div class="info" *ngIf="showInfo">
+    <div class="list">
+      <div>
+        <p>{{ course.content | courseHours }} Horas</p>
+        <fa-icon [icon]="clockIcon"></fa-icon>
+      </div>
+      <div>
+        <p>{{ course.content.length }} Modulos</p>
+        <fa-icon [icon]="bookIcon"></fa-icon>
+      </div>
+      <div>
+        <p>{{ course.content | courseClasses }} clases</p>
+        <fa-icon [icon]="playIcon"></fa-icon>
+      </div>
+      <div>
+        <p>Avanzado</p>
+        <fa-icon [icon]="levelIcon"> </fa-icon>
+      </div>
+    </div>
+  </div>
+</figure>
+<div *ngIf="showLimitDate" class="time">
+  <div>
+    <fa-icon class="icon" [icon]="clockIcon"></fa-icon>
+  </div>
+  <div>
+    <p class="title">Fecha limite para inscripción</p>
+    <h3 class="date">{{ course.limit_date| date }}</h3>
+  </div>
+</div>
+
