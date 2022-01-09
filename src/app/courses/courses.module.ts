@@ -9,6 +9,7 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ClassesComponent } from './components/classes/classes.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CoursesComponent,
     CoursesDetailsComponent,
     PaginatorComponent,
-    FiltersComponent
+    FiltersComponent,
+    ClassesComponent
   ],
   imports: [
     CommonModule,

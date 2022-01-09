@@ -1,3 +1,8 @@
+<div class="container mt-5">
+  <figure class="banner-container">
+    <img src="https://images.pexels.com/photos/7354/startup-photos.jpg?cs=srgb&dl=pexels-startup-stock-photos-7354.jpg&fm=jpg" alt="test-image">
+  </figure>
+</div>
 
 <div *ngIf="(courses$ | async) as courses; else loading"  class="container mt-5">
   <div class="row">
@@ -27,7 +32,7 @@
 </div>
 
 <ng-template #loading>
-  <div class="container mt-5">
+  <div class="container mt-5 loader">
     <div class="d-flex justify-content-center">
       <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
         <span class="visually-hidden">Loading...</span>

@@ -1,5 +1,64 @@
-<p>courses-details works!</p>
-<div *ngIf="course">
-  <h1>{{ course.title }}</h1>
-  <p>{{ course.description }}</p>
+<div class="container mt-5">
+  <div class="row g-5">
+    <!--Main content-->
+    <div class="col-7">
+
+      <div class="main-info">
+        <h1 class="title">{{ course.title }}</h1>
+        <p class="description">{{ course.description }}</p>
+      </div>
+
+      <div class="teacher">
+        <figure class="picture">
+          <img [src]="course.teacher.picture.medium" [alt]="course.teacher.name">
+        </figure>
+        <div class="info">
+          <h4 class="name">{{ course.teacher.name}}</h4>
+          <div class="country">
+            <p>{{ course.teacher.country.name }}</p>
+            <img [src]="course.teacher.country.flags.svg" [alt]="course.teacher.country.name">
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="item">
+          <fa-icon class="icon" [icon]="usersIcon"></fa-icon>
+          <h6>{{ course.students }}</h6>
+          <p>Estudiantes</p>
+        </div>
+        <div class="item">
+          <fa-icon class="icon star" [icon]="starIcont"></fa-icon>
+          <h6>{{ course.score }}</h6>
+          <p>Calificación</p>
+        </div>
+        <div class="item">
+          <fa-icon class="icon" [icon]="calendarIcon"></fa-icon>
+          <h6>{{ course.created_at | date }}</h6>
+          <p>Ultima actualización</p>
+        </div>
+      </div>
+
+      <div class="learn">
+        <h4 class="title">Que aprenderas?</h4>
+        <div class="items-grid">
+          <div *ngFor="let item of [1,2,3,4]" class="item">
+            <fa-icon class="icon" [icon]="checkIcon"></fa-icon>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, voluptatibus.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="classes">
+        <h4 class="title">Temario del curso</h4>
+        <div>
+          <app-classes></app-classes>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Second Content-->
+    <div class="col-5">Card</div>
+  </div>
 </div>

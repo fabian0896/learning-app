@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+
 import { Course } from 'src/app/models/course';
+
+import { faUsers, faStar, faCalendar, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-courses-details',
@@ -10,6 +12,12 @@ import { Course } from 'src/app/models/course';
 })
 export class CoursesDetailsComponent implements OnInit {
   course: Course;
+
+  usersIcon = faUsers;
+  starIcont = faStar;
+  calendarIcon = faCalendar;
+  checkIcon = faCheck;
+
   constructor(
     private active: ActivatedRoute,
   ) {
