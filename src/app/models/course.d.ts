@@ -31,6 +31,8 @@ export interface Content {
   lessons: number[];
 }
 
+type Category = 'development' | 'personal' | 'photography' | 'business' | 'marketing' | 'art'
+
 export interface Course {
   id: number;
   title: string;
@@ -43,7 +45,7 @@ export interface Course {
   limit_date: string;
   created_at: string;
   students: number;
-  category: string;
+  category: Category;
 }
 
 export interface CoursesResponse {
@@ -52,3 +54,9 @@ export interface CoursesResponse {
   totalPages: number;
   next: number;
 }
+
+
+export type CategoryList = {
+  name: string;
+  value: Category,
+}[]

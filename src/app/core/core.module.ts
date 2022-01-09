@@ -5,10 +5,9 @@ import { CourseService } from './services/course.service';
 import { CourseResolver } from './resolvers/course.resolver';
 import { CoursesResolver } from './resolvers/courses.resolver';
 
-
-
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -17,6 +16,7 @@ import { CoursesResolver } from './resolvers/courses.resolver';
     CourseService,
     CourseResolver,
     CoursesResolver,
-  ]
+  ],
+  exports: []
 })
 export class CoreModule { }

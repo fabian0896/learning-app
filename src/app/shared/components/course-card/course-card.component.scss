@@ -1,4 +1,126 @@
-.car {
+$gray-100: rgb(243 244 246);
+$gray-500: rgb(107 114 128);
+$gray-700: rgb(55 65 81);
+$gray-800: rgb(31 41 55);
+$gray-900: rgb(17 24 39);
+$yellow: rgb(234 179 8);
+
+.custom-card {
+  width: 100%;
+  border-radius: 5px;
+  .image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.1);
+    margin-bottom: 16px;
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .2s;
+    }
+  }
+
+  .main-info {
+    margin-bottom: 16px;
+    .title{
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      margin: 0;
+    }
+    .teacher{
+      font-size: 12px;
+      line-height: 16px;
+      display: block;
+      color: $gray-500;
+    }
+    .spacer{
+      margin: 9px 0;
+    }
+    .description{
+      margin-top: 16px;
+      font-size: 14px;
+      color: $gray-700;
+      line-height: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 60px;
+    }
+  }
+
+  .stats {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 16px;
+    .students {
+      display: flex;
+      gap: 8px;
+      color: $gray-700;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+    .score {
+      display: flex;
+      gap: 8px;
+      color: $gray-700;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      .icon {
+        color: $yellow;
+      }
+    }
+  }
+
+  .time{
+    margin-bottom: 16px;
+    background: $gray-100;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    gap: 20px;
+    .title{
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      color: $gray-800;
+      margin: 0;
+    }
+    .date{
+      color: $gray-700;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+    }
+    .icon {
+      color: $gray-800;
+      font-size: 20px;
+    }
+  }
+  .actions{
+    button{
+      width: 100%;
+    }
+  }
+}
+
+
+/* .car {
   width: 100%;
 }
 
@@ -64,4 +186,4 @@
 .flag {
   width: 20px;
   border-radius: 2px;
-}
+} */

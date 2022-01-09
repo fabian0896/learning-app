@@ -1,6 +1,40 @@
-<div *ngIf="course" class="card">
+<div *ngIf="course" class="custom-card">
+  <figure [routerLink]="[course.id]" class="image-container">
+    <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" [alt]="course.title">
+  </figure>
+  <div class="main-info">
+    <h2 class="title">{{ course.title }}</h2>
+    <span class="teacher">Profesor: {{ course.teacher.name }}</span>
+    <p class="description">{{ course.description }}</p>
+  </div>
+  <div class="stats">
+    <div class="students">
+      <fa-icon class="icon" [icon]="userIcon"></fa-icon>
+      <span>{{ course.students }}</span>
+    </div>
+    <div class="score">
+      <fa-icon class="icon" [icon]="startIcon"></fa-icon>
+      <span>{{ course.score }}</span>
+    </div>
+  </div>
+  <div class="time">
+    <div>
+      <fa-icon class="icon" [icon]="clockIcon"></fa-icon>
+    </div>
+    <div>
+      <p class="title">Fecha limite para inscripción</p>
+      <h3 class="date">{{ course.limit_date| date }}</h3>
+    </div>
+  </div>
+  <div class="actions">
+    <button [routerLink]="[course.id]" class="btn btn-primary">Más información</button>
+  </div>
+</div>
+
+
+<!-- <div *ngIf="course" class="card">
   <figure class="image-container">
-    <span class="badge bg-primary">{{ course.category }}</span>
+    <span class="badge bg-primary">{{ course.category | category }}</span>
     <img
       src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
       class="card-img-top"
@@ -32,4 +66,4 @@
       <img class="flag" [src]="course.teacher.country.flags.svg" alt="">
     </div>
   </div>
-</div>
+</div> -->

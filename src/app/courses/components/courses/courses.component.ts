@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, mergeMap, tap, Observable } from 'rxjs';
 import { CourseService } from 'src/app/core/services/course.service';
-import { Course } from 'src/app/models/course';
+import { Category, Course } from 'src/app/models/course';
+import { CATEGORIES } from 'src/app/utils/consts';
 
 @Component({
   selector: 'app-courses',
@@ -13,6 +14,7 @@ export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]> | undefined;
   totalPages: number[] = [1];
   activePage: number = 1;
+  category: Category | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,7 +23,9 @@ export class CoursesComponent implements OnInit {
     this.courses$ = this.route.queryParams.pipe(
       mergeMap(params => {
         const page: string = params['page'] ?? '1';
-        return this.courseService.getAll(page);
+        const category = params['category'];
+        this.category = category;
+        return this.courseService.getAll(page, category);
       }),
       tap(({ totalPages, page })  => {
         this.totalPages = this.getPages(page, totalPages);
@@ -33,10 +37,12 @@ export class CoursesComponent implements OnInit {
   }
 
   getPages(page: number, total: number) {
+    let length = 5;
+    if (total < length) length = total;
     let start = page - 2;
-    if (page + 2 > total) start =  total - 4;
+    if (page + 2 > total) start =  total - (length - 1);
     if (page - 2 <= 1) start = 1;
-    return Array.from({ length: 5 }, (_, i) => start + i);
+    return Array.from({ length }, (_, i) => start + i);
   }
 
   ngOnInit(): void {

@@ -5,13 +5,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CourseCardComponent } from './components/course-card/course-card.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CategoryPipe } from './pipes/category.pipe';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    CategoryPipe,
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     FooterComponent,
     CourseCardComponent,
+    CategoryPipe,
   ]
 })
 export class SharedModule { }

@@ -1,8 +1,14 @@
 <div class="container mt-5">
   <nav aria-label="Page navigation example mt-5">
     <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <a class="page-link">Previous</a>
+      <li [ngClass]="['page-item', activePage - 1 < 1 ? 'disabled' :  '']">
+        <a
+          routerLink="/courses"
+          [queryParams]="{ page: activePage - 1 }"
+          [queryParamsHandling]="'merge'"
+          class="page-link">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
       </li>
       <li *ngFor="let page of totalPages" [ngClass]="['page-item', page === activePage ? 'active' : '']">
         <a
@@ -13,8 +19,14 @@
             {{ page }}
           </a>
       </li>
-      <li class="page-item">
-        <a class="page-link" href="#">Next</a>
+      <li [ngClass]="['page-item', activePage + 1 > totalPages[totalPages.length - 1] ? 'disabled' :  '']">
+        <a
+          class="page-link"
+          routerLink="/courses"
+          [queryParams]="{ page: activePage + 1 }"
+          [queryParamsHandling]="'merge'">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
       </li>
     </ul>
   </nav>

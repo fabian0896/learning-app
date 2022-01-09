@@ -1,11 +1,50 @@
+$bg: #0d6efd;
+$gray-100: rgb(243 244 246);
+$gray-500: rgb(107 114 128);
+$gray-700: rgb(55 65 81);
+$gray-800: rgb(31 41 55);
+$gray-900: rgb(17 24 39);
+
 .content {
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
+  padding: 16px;
+  border-radius: 5px;
+  background: $gray-100;
+  .title{
+    margin-bottom: 8px;
+  }
+  .description{
+    color: $gray-700;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .selected {
-  border-right: 4px solid green;
+  border-right: 4px solid $bg;
+  color: $bg;
+}
+
+.item {
+  cursor: pointer;
+  transition: .3s color;
+  &:hover {
+    background: $bg;
+    border-radius: 5px;
+    color: white;
+  }
+}
+
+.title {
+  flex: 1,
+}
+
+.form-label{
+  color: $gray-800;
+  font-weight: 700;
 }
 

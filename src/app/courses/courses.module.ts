@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CoursesRoutingModule,
     SharedModule,
     FontAwesomeModule,
+    ReactiveFormsModule,
   ]
 })
 export class CoursesModule { }

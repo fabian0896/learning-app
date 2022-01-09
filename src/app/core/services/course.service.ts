@@ -14,12 +14,13 @@ export class CourseService {
     private http: HttpClient,
   ) { }
 
-  getAll(page?: string, category?: string | string[]) {
-    page ??= '1';
+  getAll(page?: string, category?: string) {
+    const params: {[key: string]: string} = {
+      page:  page ??= '1',
+    };
+    if (category) params['categories'] = category;
     return this.http.get<CoursesResponse>(`${environment.apiUrl}/content`, {
-      params: {
-        page: page,
-      }
+      params,
     });
   }
 
