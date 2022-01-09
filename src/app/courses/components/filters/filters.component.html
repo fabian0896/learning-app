@@ -12,9 +12,9 @@
   </div>
 </div>
 
-<div class="mb-4">
+<div class="mb-4 d-block d-xl-none">
   <label for="category" class="form-label">Filtra por categoria</label>
   <select [formControl]="select" id="category" class="form-select">
-    <option *ngFor="let option of options" [ngValue]="option.value">{{ option.name }}</option>
+    <option *ngFor="let option of options" [ngValue]="option">{{ option.name }}</option>
   </select>
 </div>

@@ -8,14 +8,21 @@ $yellow: rgb(234 179 8);
 .custom-card {
   width: 100%;
   border-radius: 5px;
+  background-color: $gray-100;
+  .info-container{
+    padding: 12px;
+  }
+
   .image-container {
     width: 100%;
+    margin: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     position: relative;
     box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.1);
-    margin-bottom: 16px;
     cursor: pointer;
     &:hover {
       img {
@@ -88,7 +95,7 @@ $yellow: rgb(234 179 8);
 
   .time{
     margin-bottom: 16px;
-    background: $gray-100;
+    background: white;
     padding: 10px;
     display: flex;
     align-items: center;

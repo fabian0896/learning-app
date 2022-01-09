@@ -23,7 +23,7 @@ export class FiltersComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
   ) {
-    this.select = new FormControl('developer');
+    this.select = new FormControl(this.options[3]);
 
     this.select.registerOnChange(() => {
       console.log('cambieee');
