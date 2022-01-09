@@ -1,0 +1,12 @@
+<div class="content">
+  <h3 class="mb-4">Categorias:</h3>
+  <div
+    (click)="selectCategory(option.value)"
+    *ngFor="let option of options"
+    [ngClass]="['d-flex align-items-center ms-3 mb-3', selection === option.value ? 'selected text-success' : '']">
+      <div class="me-2">
+        <fa-icon [icon]="selection === option.value ? checkIcon : plusIcon"></fa-icon>
+      </div>
+      <h6 class="m-0 flex-1">{{ option.name }}</h6>
+  </div>
+</div>

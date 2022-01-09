@@ -9,10 +9,6 @@ const routes: Routes = [
   {
     path: '',
     component: CoursesComponent,
-    resolve: {
-      courses: CoursesResolver,
-    },
-    runGuardsAndResolvers: 'always',
   },
   {
     path: ':id',
