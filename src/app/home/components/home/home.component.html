@@ -1,1 +1,45 @@
-<p>home works!</p>
+<div class="hero">
+  <img class="bg-image" src="/assets/images/circle-scatter.png" alt="circles-background">
+  <div class="container">
+    <div style="position: relative;">
+      <h1 class="title">Creemos que <span class="blue-text">todos somos</span> aprendices para toda la vida</h1>
+      <h3 class="subtitle">#LifelongLearning</h3>
+      <a routerLink="/courses" class="btn btn-primary mt-5">Ver todos los cursos</a>
+    </div>
+  </div>
+</div>
+
+<div class="top-clases">
+  <h2 class="title">Top Cursos</h2>
+  <div class="container slider-container mt-5">
+    <div class="pre-arr arrow">
+      <fa-icon [icon]="arrowPrevIcon"></fa-icon>
+    </div>
+    <swiper class="swiper" [config]="config">
+      <ng-template *ngFor="let course of courses" swiperSlide>
+        <app-course-card [course]="course"></app-course-card>
+      </ng-template>
+    </swiper>
+    <div class="next-arr arrow">
+      <fa-icon [icon]="arrowNextIcon"></fa-icon>
+    </div>
+  </div>
+</div>
+
+<div class="categories">
+  <h2 class="title">Categorias</h2>
+  <div class="container">
+    <div class="row g-5">
+      <div
+        routerLink="/courses"
+        [queryParams]="{ category: category.value }"
+        *ngFor="let category of categories"
+        class="category col-12 col-sm-6 col-md-4 col-xl-3">
+        <figure class="image">
+          <img [src]="'/assets/images/' + category.value + '.png'" [alt]="category.name">
+        </figure>
+        <h6 class="name">{{ category.name }}</h6>
+      </div>
+    </div>
+  </div>
+</div>

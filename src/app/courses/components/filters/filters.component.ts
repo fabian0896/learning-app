@@ -15,36 +15,41 @@ export class FiltersComponent implements OnInit {
   squareIcon = faSquare;
   checkIcon = faCheckSquare;
   select: FormControl;
-  selection: string | null =  null;
-
+  lastSelect: string = '';
   options = CATEGORIES;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
   ) {
-    this.select = new FormControl(this.options[3]);
-
-    this.select.registerOnChange(() => {
-      console.log('cambieee');
-    })
+    this.select = new FormControl('');
 
     route.queryParams.subscribe((params) => {
       const category =  params['category'];
       if (!category) {
-        this.selection = null;
+        this.select.setValue('');
+        this.lastSelect = '';
         return;
       }
-      this.selection = category;
+      this.select.setValue(category);
+      this.lastSelect = category;
     });
   }
 
   ngOnInit(): void {
   }
 
+
+
+  change() {
+    this.selectCategory(this.select.value);
+  }
+
   selectCategory(category: string | null) {
-    if (category === this.selection) {
+    if (category === this.lastSelect || !category) {
       category = null;
+      this.select.setValue('');
+      this.lastSelect = '';
     }
     this.router.navigate([], {
       relativeTo: this.route,

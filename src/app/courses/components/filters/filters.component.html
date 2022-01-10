@@ -4,9 +4,9 @@
   <div
     (click)="selectCategory(option.value)"
     *ngFor="let option of options"
-    [ngClass]="['d-flex align-items-center ms-3 mb-2 item p-2', selection === option.value ? 'selected' : '']">
+    [ngClass]="['d-flex align-items-center ms-3 mb-2 item p-2', select.value === option.value ? 'selected' : '']">
       <div class="me-2">
-        <fa-icon [icon]="selection === option.value ? checkIcon : squareIcon"></fa-icon>
+        <fa-icon [icon]="select.value === option.value ? checkIcon : squareIcon"></fa-icon>
       </div>
       <h6 class="m-0 flex-1 title">{{ option.name }}</h6>
   </div>
@@ -14,7 +14,8 @@
 
 <div class="mb-4 d-block d-xl-none">
   <label for="category" class="form-label">Filtra por categoria</label>
-  <select [formControl]="select" id="category" class="form-select">
-    <option *ngFor="let option of options" [ngValue]="option">{{ option.name }}</option>
+  <select [formControl]="select" (change)="change()" id="category" class="form-select">
+    <option value="">Todos los cursos</option>
+    <option *ngFor="let option of options" [ngValue]="option.value">{{ option.name }}</option>
   </select>
 </div>
