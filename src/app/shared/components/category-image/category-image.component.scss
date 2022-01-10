@@ -89,6 +89,20 @@
   }
 }
 
+.seen {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 5px;
+  background: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: variables.$gray-700;
+  opacity: .7;
+}
+
 .gradient {
   &.development{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );

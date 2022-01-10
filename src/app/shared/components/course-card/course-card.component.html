@@ -1,5 +1,5 @@
 <div *ngIf="course" class="custom-card">
-  <app-category-image [course]="course"></app-category-image>
+  <app-category-image [showSeen]="true" [course]="course"></app-category-image>
   <div class="info-container">
     <div class="main-info">
       <h2 class="title">{{ course.title }}</h2>

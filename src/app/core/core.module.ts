@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CourseService } from './services/course.service';
 import { CourseResolver } from './resolvers/course.resolver';
 import { CoursesResolver } from './resolvers/courses.resolver';
+import { LocalStorageService } from './services/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CoursesResolver } from './resolvers/courses.resolver';
     CourseService,
     CourseResolver,
     CoursesResolver,
+    LocalStorageService,
   ],
   exports: []
 })

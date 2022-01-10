@@ -1,5 +1,9 @@
 <figure [routerLink]="['/courses',course.id]" [ngClass]="['image-container gradient', course.category, dense ? 'dense': '']">
   <img [src]="'/assets/images/' + course.category + '.png'" [alt]="course.category | category">
+  <div *ngIf="seen && showSeen" class="seen">
+    <fa-icon [icon]="eyeIcon"></fa-icon>
+    <span>Visto</span>
+  </div>
   <h6 class="category">{{ course.category | category }}</h6>
   <div class="info" *ngIf="showInfo">
     <div class="list">
