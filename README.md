@@ -21,7 +21,7 @@ A continuación se dará una breve explicación de el uso de estas librerias/fra
 
 ### Angular
 
-Es el framework utilizado para realizar las vistas y manejar los estados de la aplicación. Es la base de la aplicación y se usa desde el renderizado hasta para el ruteo de las paginas.
+Es el framework utilizado para realizar las vistas y manejar los estados de la aplicación. Es la base de la aplicación y se usa desde el renderizado hasta para el ruteo de las páginas.
 
 ### Swiper
 
@@ -39,13 +39,13 @@ Para poder acceder a la aplicación puede hacer click en el siguiente link:
 
 La aplicación cuenta con 3 partes fundamentales.
 
-- Pagina de home
+- Página de home
 - Listado de cursos
 - Detalles de los cursos
 
-### Pagina de home.
+### Página de home.
 
-En esta pagina podrás encontrar un resumen con los mejores cursos y un listado de las categorías que tiene la plataforma para una rápido acceso.
+En esta página podrás encontrar un resumen con los mejores cursos y un listado de las categorías que tiene la plataforma para una rápido acceso.
 
 <img src="src/assets/docs/home_d_1.png" width="500">
 <img src="src/assets/docs/home_d_2.png" width="500">
@@ -55,7 +55,7 @@ En esta pagina podrás encontrar un resumen con los mejores cursos y un listado 
 
 ### Listado de cursos
 
-En esta sección podemos ver todos los cursos que tiene la plataforma y nos permite filtrar por categoría e ir cambiando de pagina de una forma muy simple.
+En esta sección podemos ver todos los cursos que tiene la plataforma y nos permite filtrar por categoría e ir cambiando de página de una forma muy simple.
 
 <img src="src/assets/docs/courses_d_1.png" width="500">
 <img src="src/assets/docs/courses_d_2.png" width="500">
@@ -65,7 +65,7 @@ En esta sección podemos ver todos los cursos que tiene la plataforma y nos perm
 
 ### Detalles del curso
 
-Esta pagina nos permite ver todos los detalles que tiene un curso. Desde el tiempo total, los módulos, las clases hasta información del profesor que dicta el curso. Al entra a esta pagina el curso se marca como visto y podrás ver un indicador en la sección de cursos. Esto te permite tener claro que cursos has visto y cuales te faltan por revisar.
+Esta página nos permite ver todos los detalles que tiene un curso. Desde el tiempo total, los módulos, las clases hasta información del profesor que dicta el curso. Al entra a esta página el curso se marca como visto y podrás ver un indicador en la sección de cursos. Esto te permite tener claro que cursos has visto y cuales te faltan por revisar.
 <img src="src/assets/docs/details_d_1.png" width="500">
 <img src="src/assets/docs/details_d_2.png" width="500">
 <br>
