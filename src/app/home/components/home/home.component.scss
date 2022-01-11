@@ -1,12 +1,12 @@
-@use '/src/app/variables';
+@use "/src/app/variables";
 
-.hero{
+.hero {
   background: linear-gradient(to right top, rgb(31, 41, 55), rgb(0, 0, 0));
   height: 400px;
   width: 100%;
   position: relative;
   margin-bottom: 48px;
-  .container{
+  .container {
     display: flex;
     align-items: center;
     height: 100%;
@@ -18,9 +18,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .1;
+    opacity: 0.1;
   }
-  .title{
+  .title {
     margin-bottom: 20px;
     font-size: 48px;
     line-height: 1;
@@ -34,7 +34,7 @@
       font-weight: 500;
     }
   }
-  .subtitle{
+  .subtitle {
     margin: 0;
     font-size: 20px;
     line-height: 28px;
@@ -43,37 +43,35 @@
   }
 }
 
-.top-clases{
+.top-clases {
   margin-bottom: 100px;
-  .title{
+  .title {
     text-align: center;
   }
 }
 
-
-.slider-container{
+.slider-container {
   display: flex;
   align-items: center;
   gap: 20px;
-  .swiper{
+  .swiper {
     flex: 1;
   }
-  .arrow{
+  .arrow {
     font-size: 30px;
     cursor: pointer;
     color: rgb(59 130 246);
   }
 }
 
-
-.categories{
+.categories {
   margin-bottom: 100px;
-  .title{
+  .title {
     text-align: center;
     margin-bottom: 50px;
   }
-  .category{
-    .image{
+  .category {
+    .image {
       background: variables.$gray-100;
       aspect-ratio: 1;
       border-radius: 5px;
@@ -84,13 +82,24 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: .7;
+        opacity: 0.7;
       }
     }
-    .name{
+    .name {
       margin: 0;
       font-size: 20px;
       color: variables.$gray-700;
+    }
+  }
+}
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  .hero {
+    height: auto;
+    padding: 30px 10px;
+    .title {
+      width: 100%;
     }
   }
 }
