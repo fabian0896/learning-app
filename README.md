@@ -3,7 +3,7 @@
   <h1>Learning App</h1>
 </div>
 
-Learning App es una aplicación web destinada a el aprendizaje. Esta plataforma permite listar uns serie de cursos de diferentes categorías y ver los detalles de cada curso. Tanto tiempo total que tomara realizar el curso como el numero de clases y modulos entre otros datos relevantes.
+[Learning App](https://learning-app-31d87.web.app/home) es una aplicación web destinada a el aprendizaje. Esta plataforma permite listar uns serie de cursos de diferentes categorías y ver los detalles de cada curso. Tanto tiempo total que tomara realizar el curso como el numero de clases y modulos entre otros datos relevantes.
 
 La plataforma esta creada para que sea muy intuitiva y amigable con el usuario. Y se adapta a diferentes tipos de dispositivos. Tanto desktop como mobile.
 
@@ -35,7 +35,7 @@ Este framework se usó para darle los estilos a diferente partes de la aplicaci�
 
 ## Instruciónes
 
-Para poder acceder a la aplicación puede hacer click en el siguiente link:
+Para poder acceder a la aplicación puede hacer click en el siguiente link: [Learning App](https://learning-app-31d87.web.app/home)
 
 La aplicación cuenta con 3 partes fundamentales.
 
