@@ -1,14 +1,14 @@
-@use '/src/app/variables';
+@use "/src/app/variables";
 
-.module-header{
-  .title{
+.module-header {
+  .title {
     color: rgb(31 41 55);
     font-weight: 600;
     font-size: 18x;
     line-height: 28px;
     margin: 0;
   }
-  .description{
+  .description {
     font-size: 14px;
     line-height: 20px;
     margin: 0;
@@ -17,11 +17,11 @@
   }
 }
 
-.link{
+.link {
   text-decoration: none;
 }
 
-.resume{
+.resume {
   display: flex;
   gap: 20px;
   .item {
@@ -32,31 +32,32 @@
   }
 }
 
-.lesson{
+.lesson {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
+  outline: none;
   align-items: center;
   padding: 12px;
   border-radius: 5px;
   cursor: pointer;
-  transition: .2s;
-  &:hover{
+  transition: 0.2s;
+  &:hover {
     background: variables.$gray-100;
   }
-  .info{
+  .info {
     display: flex;
     gap: 10px;
     font-weight: 600;
     color: variables.$gray-700;
-    .icon{
+    .icon {
       color: variables.$lime;
     }
     p {
       margin: 0;
     }
   }
-  .time{
+  .time {
     font-size: 14px;
     line-height: 18px;
     color: variables.$gray-500;
@@ -64,4 +65,10 @@
       margin: 0;
     }
   }
+}
+
+.accordion-button {
+  padding: 12px;
+  outline: none;
+  border-radius: 0;
 }

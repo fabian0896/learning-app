@@ -17,11 +17,9 @@ export class CoursesResolver implements Resolve<CoursesResponse> {
     private courseService: CourseService,
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<CoursesResponse> {
+  resolve(route: ActivatedRouteSnapshot): Observable<CoursesResponse> {
     const page = route.queryParamMap.get('page') ?? '1';
     const categories = route.queryParamMap.getAll('category');
-    console.log(page, categories);
-
     return this.courseService.getAll(page);
   }
 }
